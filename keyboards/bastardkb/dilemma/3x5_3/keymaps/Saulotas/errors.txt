@@ -1,0 +1,340 @@
+Welcome to QMK MSYS!
+  * Documentation:    https://docs.qmk.fm
+  * Support:          https://discord.gg/Uq7gcHh
+
+If you have not already done so,
+  run qmk setup to get started.
+  run qmk compile -kb <keyboard> -km default to start building.
+  run qmk config user.hide_welcome=True to hide this message.
+[gavronidakis@CS-SUPPORT01 ~]$ qmk config user.keyboard=bastardkb/dilemma/3x5_3
+user.keyboard: bastardkb/dilemma/3x5_3 -> bastardkb/dilemma/3x5_3
+Ψ Wrote configuration to C:/Users/gavronidakis/AppData/Local/QMK.EXE/qmk.exe/qmk.exe.ini
+[gavronidakis@CS-SUPPORT01 ~]$ qmk config user.keymap=Saulotas
+user.keymap: Saulotas -> Saulotas
+Ψ Wrote configuration to C:/Users/gavronidakis/AppData/Local/QMK.EXE/qmk.exe/qmk.exe.ini
+[gavronidakis@CS-SUPPORT01 ~]$ qmk new-keymap
+Ψ Generating a new keymap
+
+Ψ Created a new keymap called Saulotas in: C:/Users/gavronidakis/qmk_firmware/keyboards/bastardkb/dilemma/3x5_3/keymaps/Saulotas.
+Ψ Compile a firmware with your new keymap by typing: qmk compile -kb bastardkb/dilemma/3x5_3 -km Saulotas.
+[gavronidakis@CS-SUPPORT01 ~]$ qmk config user.keyboard=bastardkb/dilemmadev/3x5_3
+user.keyboard: bastardkb/dilemma/3x5_3 -> bastardkb/dilemmadev/3x5_3
+Ψ Wrote configuration to C:/Users/gavronidakis/AppData/Local/QMK.EXE/qmk.exe/qmk.exe.ini
+[gavronidakis@CS-SUPPORT01 ~]$ qmk new-keymap
+Ψ Generating a new keymap
+
+Ψ Created a new keymap called Saulotas in: C:/Users/gavronidakis/qmk_firmware/keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas.
+Ψ Compile a firmware with your new keymap by typing: qmk compile -kb bastardkb/dilemmadev/3x5_3 -km Saulotas.
+[gavronidakis@CS-SUPPORT01 ~]$ qmk compile
+Ψ Compiling keymap with make -r -R -f builddefs/build_keyboard.mk -s KEYBOARD=bastardkb/dilemmadev/3x5_3 KEYMAP=Saulotas KEYBOARD_FILESAFE=bastardkb_dilemmadev_3x5_3 TARGET=bastardkb_dilemmadev_3x5_3_Saulotas INTERMEDIATE_OUTPUT=.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas VERBOSE=false COLOR=true SILENT=false QMK_BIN="qmk"
+
+
+make: Warning: File 'keyboards/bastardkb/dilemmadev/3x5_3/rules.mk' has modification time 14039 s in the future
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/info_deps.d                          [OK]
+make: Warning: File 'keyboards/bastardkb/dilemmadev/3x5_3/rules.mk' has modification time 13972 s in the future
+arm-none-eabi-gcc.exe (GCC) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/info_config.h                        [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.c                   [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h                   [OK]
+Compiling: keyboards/bastardkb/dilemmadev/3x5_3/3x5_3.c                                             [OK]
+Compiling: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.c                    [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from ./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:19,
+                 from quantum/keymap_introspection.c:5:
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:105:33: error: 'DPI_MOD' undeclared here (not in a function); did you mean 'MI_MOD'?
+  105 |     XXXXXXX,  XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD, S_D_MOD, DPI_MOD, XXXXXXX,  XXXXXXX, TG(6),
+      |                                 ^~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:32:26: note: in definition of macro 'LAYOUT_split_3x5_3'
+   32 |          {k0A, k0B, k0C, k0D, k0E}, \
+      |                          ^~~
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:105:42: error: 'S_D_MOD' undeclared here (not in a function)
+  105 |     XXXXXXX,  XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD, S_D_MOD, DPI_MOD, XXXXXXX,  XXXXXXX, TG(6),
+      |                                          ^~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:32:31: note: in definition of macro 'LAYOUT_split_3x5_3'
+   32 |          {k0A, k0B, k0C, k0D, k0E}, \
+      |                               ^~~
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:107:14: error: 'DRGSCRL' undeclared here (not in a function)
+  107 |     _______, DRGSCRL, SNIPING, KC_BTN3, XXXXXXX, XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
+      |              ^~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:34:16: note: in definition of macro 'LAYOUT_split_3x5_3'
+   34 |          {k2A, k2B, k2C, k2D, k2E}, \
+      |                ^~~
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:107:23: error: 'SNIPING' undeclared here (not in a function)
+  107 |     _______, DRGSCRL, SNIPING, KC_BTN3, XXXXXXX, XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
+      |                       ^~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:34:21: note: in definition of macro 'LAYOUT_split_3x5_3'
+   34 |          {k2A, k2B, k2C, k2D, k2E}, \
+      |                     ^~~
+quantum/keymap_introspection.c:59:1: error: static assertion failed: "Number of encoder_map layers doesn\'t match the number of keymap layers"
+   59 | _Static_assert(NUM_KEYMAP_LAYERS_RAW == NUM_ENCODERMAP_LAYERS_RAW, "Number of encoder_map layers doesn't match the number of keymap layers");
+      | ^~~~~~~~~~~~~~
+ [ERRORS]
+ |
+ |
+ |
+make: *** [builddefs/common_rules.mk:373: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/quantum/keymap_introspection.o] Error 1
+[gavronidakis@CS-SUPPORT01 ~]$
+[gavronidakis@CS-SUPPORT01 ~]$ qmk compile -kb bastardkb/dilemmadev/3x5_3 -kb via
+usage: qmk.exe compile [-h] [--compiledb] [-t TARGET] [-c] [-e ENV] [-j PARALLEL] [-n] [-km KEYMAP] [-kb KEYBOARD]
+                       [filename]
+qmk.exe compile: error: argument -kb/--keyboard: invalid keyboard_folder_or_all value: 'via'
+[gavronidakis@CS-SUPPORT01 ~]$ qmk compile -kb bastardkb/dilemmadev/3x5_3 -kb via
+usage: qmk.exe compile [-h] [--compiledb] [-t TARGET] [-c] [-e ENV] [-j PARALLEL] [-n] [-km KEYMAP] [-kb KEYBOARD]
+                       [filename]
+qmk.exe compile: error: argument -kb/--keyboard: invalid keyboard_folder_or_all value: 'via'
+[gavronidakis@CS-SUPPORT01 ~]$ qmk compile -kb bastardkb/dilemmadev/3x5_3 -km via
+Ψ Compiling keymap with make -r -R -f builddefs/build_keyboard.mk -s KEYBOARD=bastardkb/dilemmadev/3x5_3 KEYMAP=via KEYBOARD_FILESAFE=bastardkb_dilemmadev_3x5_3 TARGET=bastardkb_dilemmadev_3x5_3_via INTERMEDIATE_OUTPUT=.build/obj_bastardkb_dilemmadev_3x5_3_via VERBOSE=false COLOR=true SILENT=false QMK_BIN="qmk"
+
+
+make: Warning: File 'keyboards/bastardkb/dilemmadev/3x5_3/rules.mk' has modification time 12976 s in the future
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_via/src/info_deps.d                               [OK]
+make: Warning: File 'keyboards/bastardkb/dilemmadev/3x5_3/rules.mk' has modification time 12909 s in the future
+arm-none-eabi-gcc.exe (GCC) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_via/src/info_config.h                             [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.c                        [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h                        [OK]
+Compiling: keyboards/bastardkb/dilemmadev/3x5_3/3x5_3.c                                             [OK]
+Compiling: .build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.c                         [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from
+ ./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:19,
+                 from quantum/keymap_introspection.c:5:
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:114:32: error: 'DPI_MOD' undeclared here (not in a function); did you mean 'MI_MOD'?
+  114 |     QK_BOOT,  EE_CLR, XXXXXXX, DPI_MOD, S_D_MOD, S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
+      |                                ^~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h:32:26: note: in definition of macro 'LAYOUT_split_3x5_3'
+   32 |          {k0A, k0B, k0C, k0D, k0E}, \
+      |                          ^~~
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:114:41: error: 'S_D_MOD' undeclared here (not in a function)
+  114 |     QK_BOOT,  EE_CLR, XXXXXXX, DPI_MOD, S_D_MOD, S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
+      |                                         ^~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h:32:31: note: in definition of macro 'LAYOUT_split_3x5_3'
+   32 |          {k0A, k0B, k0C, k0D, k0E}, \
+      |                               ^~~
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:116:14: error: 'DRGSCRL' undeclared here (not in a function)
+  116 |     _______, DRGSCRL, SNIPING, KC_BTN3, XXXXXXX, XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
+      |              ^~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h:34:16: note: in definition of macro 'LAYOUT_split_3x5_3'
+   34 |          {k2A, k2B, k2C, k2D, k2E}, \
+      |                ^~~
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:116:23: error: 'SNIPING' undeclared here (not in a function)
+  116 |     _______, DRGSCRL, SNIPING, KC_BTN3, XXXXXXX, XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
+      |                       ^~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h:34:21: note: in definition of macro 'LAYOUT_split_3x5_3'
+   34 |          {k2A, k2B, k2C, k2D, k2E}, \
+      |                     ^~~
+quantum/keymap_introspection.c:59:1: error: static assertion failed: "Number of encoder_map layers doesn\'t match the number of keymap layers"
+   59 | _Static_assert(NUM_KEYMAP_LAYERS_RAW == NUM_ENCODERMAP_LAYERS_RAW, "Number of encoder_map layers doesn't match the number of keymap layers");
+      | ^~~~~~~~~~~~~~
+ [ERRORS]
+ |
+ |
+ |
+make: *** [builddefs/common_rules.mk:373: .build/obj_bastardkb_dilemmadev_3x5_3_via/quantum/keymap_introspection.o] Error 1
+[gavronidakis@CS-SUPPORT01 ~]$ qmk compile
+Ψ Compiling keymap with make -r -R -f builddefs/build_keyboard.mk -s KEYBOARD=bastardkb/dilemmadev/3x5_3 KEYMAP=Saulotas KEYBOARD_FILESAFE=bastardkb_dilemmadev_3x5_3 TARGET=bastardkb_dilemmadev_3x5_3_Saulotas INTERMEDIATE_OUTPUT=.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas VERBOSE=false COLOR=true SILENT=false QMK_BIN="qmk"
+
+
+make: Warning: File 'keyboards/bastardkb/dilemmadev/3x5_3/rules.mk' has modification time 12236 s in the future
+arm-none-eabi-gcc.exe (GCC) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/info_config.h                        [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.c                   [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h                   [OK]
+Compiling: keyboards/bastardkb/dilemmadev/3x5_3/3x5_3.c                                             [OK]
+Compiling: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.c                    [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from
+ ./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:19,
+                 from quantum/keymap_introspection.c:5:
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:32:29: error: expected expression before ',' token
+   32 |          {k0A, k0B, k0C, k0D, k0E}, \
+      |                             ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:104:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  104 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:34:19: error: expected expression before ',' token
+   34 |          {k2A, k2B, k2C, k2D, k2E}, \
+      |                   ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:104:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  104 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:36:29: error: expected expression before ',' token
+   36 |          {k4A, k4B, k4C, k4D, k4E}, \
+      |                             ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:104:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  104 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:38:19: error: expected expression before ',' token
+   38 |          {k6A, k6B, k6C, k6D, k6E}, \
+      |                   ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:104:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  104 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+quantum/keymap_introspection.c:59:1: error: static assertion failed: "Number of encoder_map layers doesn\'t match the number of keymap layers"
+   59 | _Static_assert(NUM_KEYMAP_LAYERS_RAW == NUM_ENCODERMAP_LAYERS_RAW, "Number of encoder_map layers doesn't match the number of keymap layers");
+      | ^~~~~~~~~~~~~~
+ [ERRORS]
+ |
+ |
+ |
+make: *** [builddefs/common_rules.mk:373: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/quantum/keymap_introspection.o] Error 1
+[gavronidakis@CS-SUPPORT01 ~]$ qmk compile
+Ψ Compiling keymap with make -r -R -f builddefs/build_keyboard.mk -s KEYBOARD=bastardkb/dilemmadev/3x5_3 KEYMAP=Saulotas KEYBOARD_FILESAFE=bastardkb_dilemmadev_3x5_3 TARGET=bastardkb_dilemmadev_3x5_3_Saulotas INTERMEDIATE_OUTPUT=.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas VERBOSE=false COLOR=true SILENT=false QMK_BIN="qmk"
+
+
+make: Warning: File 'keyboards/bastardkb/dilemmadev/3x5_3/rules.mk' has modification time 11802 s in the future
+arm-none-eabi-gcc.exe (GCC) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/info_config.h                        [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.c                   [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h                   [OK]
+Compiling: keyboards/bastardkb/dilemmadev/3x5_3/3x5_3.c                                             [OK]
+Compiling: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.c                    [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from
+ ./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:19,
+                 from quantum/keymap_introspection.c:5:
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:32:29: error: expected expression before ',' token
+   32 |          {k0A, k0B, k0C, k0D, k0E}, \
+      |                             ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:103:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  103 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:34:19: error: expected expression before ',' token
+   34 |          {k2A, k2B, k2C, k2D, k2E}, \
+      |                   ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:103:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  103 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:36:29: error: expected expression before ',' token
+   36 |          {k4A, k4B, k4C, k4D, k4E}, \
+      |                             ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:103:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  103 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:38:19: error: expected expression before ',' token
+   38 |          {k6A, k6B, k6C, k6D, k6E}, \
+      |                   ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:103:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  103 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+quantum/keymap_introspection.c:59:1: error: static assertion failed: "Number of encoder_map layers doesn\'t match the number of keymap layers"
+   59 | _Static_assert(NUM_KEYMAP_LAYERS_RAW == NUM_ENCODERMAP_LAYERS_RAW, "Number of encoder_map layers doesn't match the number of keymap layers");
+      | ^~~~~~~~~~~~~~
+ [ERRORS]
+ |
+ |
+ |
+make: *** [builddefs/common_rules.mk:373: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/quantum/keymap_introspection.o] Error 1
+[gavronidakis@CS-SUPPORT01 ~]$ qmk compile
+Ψ Compiling keymap with make -r -R -f builddefs/build_keyboard.mk -s KEYBOARD=bastardkb/dilemmadev/3x5_3 KEYMAP=Saulotas KEYBOARD_FILESAFE=bastardkb_dilemmadev_3x5_3 TARGET=bastardkb_dilemmadev_3x5_3_Saulotas INTERMEDIATE_OUTPUT=.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas VERBOSE=false COLOR=true SILENT=false QMK_BIN="qmk"
+
+
+make: Warning: File 'keyboards/bastardkb/dilemmadev/3x5_3/rules.mk' has modification time 11106 s in the future
+arm-none-eabi-gcc.exe (GCC) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/info_config.h                        [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.c                   [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h                   [OK]
+Compiling: keyboards/bastardkb/dilemmadev/3x5_3/3x5_3.c                                             [OK]
+Compiling: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.c                    [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from
+ ./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:19,
+                 from quantum/keymap_introspection.c:5:
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:32:29: error: expected expression before ',' token
+   32 |          {k0A, k0B, k0C, k0D, k0E}, \
+      |                             ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:103:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  103 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:34:19: error: expected expression before ',' token
+   34 |          {k2A, k2B, k2C, k2D, k2E}, \
+      |                   ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:103:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  103 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:36:29: error: expected expression before ',' token
+   36 |          {k4A, k4B, k4C, k4D, k4E}, \
+      |                             ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:103:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  103 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/src/default_keyboard.h:38:19: error: expected expression before ',' token
+   38 |          {k6A, k6B, k6C, k6D, k6E}, \
+      |                   ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/Saulotas/keymap.c:103:21: note: in expansion of macro 'LAYOUT_split_3x5_ '
+  103 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+quantum/keymap_introspection.c:59:1: error: static assertion failed: "Number of encoder_map layers doesn\'t match the number of keymap layers"
+   59 | _Static_assert(NUM_KEYMAP_LAYERS_RAW == NUM_ENCODERMAP_LAYERS_RAW, "Number of encoder_map layers doesn't match the number of keymap layers");
+      | ^~~~~~~~~~~~~~
+ [ERRORS]
+ |
+ |
+ |
+make: *** [builddefs/common_rules.mk:373: .build/obj_bastardkb_dilemmadev_3x5_3_Saulotas/quantum/keymap_introspection.o] Error 1
+[gavronidakis@CS-SUPPORT01 ~]$ qmk compile -kb bastardkb/dilemmadev/3x5_3 -km via
+Ψ Compiling keymap with make -r -R -f builddefs/build_keyboard.mk -s KEYBOARD=bastardkb/dilemmadev/3x5_3 KEYMAP=via KEYBOARD_FILESAFE=bastardkb_dilemmadev_3x5_3 TARGET=bastardkb_dilemmadev_3x5_3_via INTERMEDIATE_OUTPUT=.build/obj_bastardkb_dilemmadev_3x5_3_via VERBOSE=false COLOR=true SILENT=false QMK_BIN="qmk"
+
+
+make: Warning: File 'keyboards/bastardkb/dilemmadev/3x5_3/rules.mk' has modification time 9527 s in the future
+arm-none-eabi-gcc.exe (GCC) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_via/src/info_config.h                             [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.c                        [OK]
+Generating: .build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h                        [OK]
+Compiling: keyboards/bastardkb/dilemmadev/3x5_3/3x5_3.c                                             [OK]
+Compiling: .build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.c                         [OK]
+Compiling: quantum/keymap_introspection.c                                                          In file included from
+ ./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:19,
+                 from quantum/keymap_introspection.c:5:
+./.build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h:32:29: error: expected expression before ',' token
+   32 |          {k0A, k0B, k0C, k0D, k0E}, \
+      |                             ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:113:21: note: in expansion of macro 'LAYOUT_split_3x5_3'
+  113 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h:34:19: error: expected expression before ',' token
+   34 |          {k2A, k2B, k2C, k2D, k2E}, \
+      |                   ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:113:21: note: in expansion of macro 'LAYOUT_split_3x5_3'
+  113 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h:36:29: error: expected expression before ',' token
+   36 |          {k4A, k4B, k4C, k4D, k4E}, \
+      |                             ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:113:21: note: in expansion of macro 'LAYOUT_split_3x5_3'
+  113 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+./.build/obj_bastardkb_dilemmadev_3x5_3_via/src/default_keyboard.h:38:19: error: expected expression before ',' token
+   38 |          {k6A, k6B, k6C, k6D, k6E}, \
+      |                   ^
+./keyboards/bastardkb/dilemmadev/3x5_3/keymaps/via/keymap.c:113:21: note: in expansion of macro 'LAYOUT_split_3x5_3'
+  113 |   [LAYER_POINTER] = LAYOUT_split_3x5_3(
+      |                     ^~~~~~~~~~~~~~~~~~
+quantum/keymap_introspection.c:59:1: error: static assertion failed: "Number of encoder_map layers doesn\'t match the number of keymap layers"
+   59 | _Static_assert(NUM_KEYMAP_LAYERS_RAW == NUM_ENCODERMAP_LAYERS_RAW, "Number of encoder_map layers doesn't match the number of keymap layers");
+      | ^~~~~~~~~~~~~~
+ [ERRORS]
+ |
+ |
+ |
+make: *** [builddefs/common_rules.mk:373: .build/obj_bastardkb_dilemmadev_3x5_3_via/quantum/keymap_introspection.o] Error 1
+[gavronidakis@CS-SUPPORT01 ~]$
