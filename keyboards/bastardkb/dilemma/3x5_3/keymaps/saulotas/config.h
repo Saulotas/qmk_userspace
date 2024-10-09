@@ -1,6 +1,5 @@
 /**
- * Copyright 2021 Charly Delay <charly@codesink.dev> (@0xcharly)
- * Copyright 2023 casuanoob <casuanoob@hotmail.com> (@casuanoob)
+ * Copyright 2024 George Avronidakis <saulot1982@gmail.com> (@Hakuho)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,6 +16,7 @@
  */
 #pragma once
 
+/* Undefining all the default configuration from the stock dilemma keymap, in order for this one to be standalone*/
 #undef MOUSE_EXTENDED_REPORT
 #undef CIRQUE_PINNACLE_DIAMETER_MM
 #undef CIRQUE_PINNACLE_CURVED_OVERLAY

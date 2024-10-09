@@ -1,6 +1,5 @@
 /**
- * Copyright 2022 Charly Delay <charly@codesink.dev> (@0xcharly)
- * Copyright 2023 casuanoob <casuanoob@hotmail.com> (@casuanoob)
+ * Copyright 2024 George Avronidakis <saulot1982@gmail.com> (@Hakuho)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -60,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
 /*
- * Layers used on the Dilemma.
+ * Layers used on this Dilemma.
  *
  * These layers started off heavily inspired by the Miryoku layout, but trimmed
  * down and tailored for a stock experience that is meant to be fundation for

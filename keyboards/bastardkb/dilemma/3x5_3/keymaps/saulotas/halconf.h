@@ -1,5 +1,5 @@
 /**
- * Copyright 2022 Charly Delay <charly@codesink.dev> (@0xcharly)
+ * Copyright 2024 George Avronidakis <saulot1982@gmail.com> (@Hakuho)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,6 @@
 
 #pragma once
 
-//#define HAL_USE_SPI TRUE
 #define HAL_USE_I2C TRUE
 
 #include_next <halconf.h>

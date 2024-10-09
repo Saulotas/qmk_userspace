@@ -1,5 +1,5 @@
 /**
- * Copyright 2022 Charly Delay <charly@codesink.dev> (@0xcharly)
+ * Copyright 2024 George Avronidakis <saulot1982@gmail.com> (@Hakuho)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,9 +18,6 @@
 #pragma once
 
 #include_next <mcuconf.h>
-
-//#undef RP_SPI_USE_SPI0
-//#define RP_SPI_USE_SPI0 TRUE
 
 #undef RP_I2C_USE_I2C1
 #define RP_I2C_USE_I2C1 TRUE
